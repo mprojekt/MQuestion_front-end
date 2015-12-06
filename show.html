@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQuestions - wynik</title>
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/my-custom.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/my-scripts.vote.js"></script>
+	<script src="assets/js/jquery.ui.datepicker-pl.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default panel-nav">
+                    <div class="panel-heading">
+                        <h1 class="text-center"><a class="text-info" href="#"><span class="fa fa-home"></span></a>MQuestion </h1></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-nowrap text-left" id="page-label">wyniki </h1></div>
+        </div>
+        <div class="col-md-8 col-md-offset-1">
+            <div class="panel panel-info bg-light-blue">
+                <div class="panel-body bg-light-blue"><span>// wykres w &lt;canvas&gt;</span></div>
+                <div class="panel-footer bg-blue">
+                    <h3>Tytuł pytania</h3>
+                    <p>treść pytania</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-success draggable" id="setings">
+                <ul class="list-group">
+                    <li class="list-group-item bg-light-green">
+                        <p class="list-group-item-text">Typ wykresu:</p>
+                        <select>
+                            <option value="1" selected="">słupkowy</option>
+                            <option value="2">kreskowy</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="text-center">Created by Marcin Pietroszek <span class="fa fa-copyright"></span> 2015 Wszelkie prawa zastrzeżone! </p>
+    </footer>
+</body>
+
+</html>
