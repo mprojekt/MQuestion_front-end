@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQuestion - nowe pytanie</title>
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/my-custom.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/my-scripts.create.js"></script>
+	<script src="assets/js/jquery.ui.datepicker-pl.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default panel-nav">
+                    <div class="panel-heading">
+                        <h1 class="text-center"><a class="text-info" href="#"><span class="fa fa-home"></span></a>MQuestion <small>menu </small></h1>
+                        <div class="btn-group btn-group-justified" role="group">
+							<a class="btn btn-primary btn-toggle" role="button" href="info" data-dest="info" ><span class="fa fa-toggle-on"></span> Informacje</a>
+							<a class="btn btn-primary btn-toggle" role="button" href="setings" data-dest="setings" ><span class="fa fa-toggle-on"></span> Podstawowe</a>
+							<a class="btn btn-primary btn-toggle" role="button" href="advenced" data-dest="advenced" ><span class="fa fa-toggle-on"></span> Zaawansowane</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-nowrap text-left" id="page-label">nowe pytanie</h1></div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-info " id="info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="fa fa-info"></span> Informacje<button aria-label="Close" class="close" data-dest="info"><span aria-hidden="true">×</span></button> 
+						<span class="fa fa-caret-up" id="info-caret"></span>
+					</h3>
+				</div>
+                <div class="panel-body bg-light-blue" id="info-text">
+                    <ol>
+						<li>Pytanie może być typu <i>ankieta</i> lub <i>test</i></li>
+						<li>Każde pytanie musi zawierać: tytuł, treść pytania i conajmniej jedna dpowiedź, a pytanie testowe również które odpowiedzi są poprawne.</li>
+                        <li>Domyślnie kazde pytanie będzie aktywne 14 dni. Można to ustawić wg własnego uznania, ale nie dłużej niż 2 miesiące.</li>
+                        <li>Po dodaniu pytania dostaniesz bezpośredni link do pytania.</li>
+                        <li>Odpowiedzi można sortować według własnego uznania.</li>
+                    </ol>
+                </div>
+                <ul id="check-group" class="list-group">
+                    <li class="list-group-item list-group-item-danger" id="info-title"><span class="fa fa-square-o"></span><span> Tytuł pytania</span></li>
+                    <li class="list-group-item list-group-item-danger" id="info-content"><span class="fa fa-square-o"></span><span> Treść pytania</span></li>
+                    <li class="list-group-item list-group-item-danger" id="info-answer"><span class="fa fa-square-o"></span><span> Odpowiedzi </span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <article id="question">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <input type="text" name="question_title" required="" placeholder="Tytuł pytania">
+                    </div>
+                    <div class="panel-body bg-light-blue">
+                        <textarea rows="4" name="question_text" required="" placeholder="Treść pytania"></textarea>
+                    </div>
+                    <div class="panel-footer bg-light-blue"><span>Odpowiedzi: </span>
+                        <ul class="list-group answers">
+                            <li class="list-group-item list-group-item-info answer">
+								<span class="fa fa-arrows-v"></span><span class="right-answer"></span>
+                                <input type="text" placeholder="Odpowiedź"><span class="fa fa-close answer-close"></span></li>
+                            <li class="list-group-item list-group-item-info answer">
+								<span class="fa fa-arrows-v"></span><span class="right-answer"></span>
+                                <input type="text" placeholder="Odpowiedź"><span class="fa fa-close answer-close"></span></li>
+                            <li class="list-group-item list-group-item-info answer">
+								<span class="fa fa-arrows-v"></span><span class="right-answer"></span>
+                                <input type="text" placeholder="Odpowiedź"><span class="fa fa-close answer-close"></span></li>
+                        </ul>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-light-blue">
+                            <p class="list-group-item-text">Aby dodać kolejna odpowiedź przeciagnij poniższy pasek do odpowiedzi powyżej</p>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-info answer" id="drag-to-clone">
+									<span class="fa fa-arrows-v"></span><span class="right-answer"></span>
+                                    <input type="text" placeholder="Odpowiedź" disabled><span class="fa fa-close"></span></li>
+                            </ul>
+                        </li>
+						<li class="list-group-item bg-light-blue clearfix">
+                            <div class="col-md-6 col-md-offset-3">
+								<button id="btn-submit" class="btn btn-success btn-block" disabled>Zadaj to pytanie</button>
+							</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-success " id="setings">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="fa fa-gear"></span> Podstawowe <button aria-label="Close" class="close" data-dest="setings"><span aria-hidden="true">×</span></button></h3></div>
+                <ul class="list-group">
+                    <li class="list-group-item bg-light-green">
+                        <p class="list-group-item-text">Typ pytania:</p>
+                        <div class="row">
+                            <div class="col-md-12">
+								<span class="type-radio-option">
+									<label class="radio-inline">
+										<input type="radio" name="type_question" value="questionary" checked=""><span>&nbsp; ankieta</span>
+									</label>
+                                </span>
+								<span class="type-radio-option">
+									<label class="radio-inline">
+										<input type="radio" name="type_question" value="test"><span>&nbsp; test</span>
+									</label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-light-green">
+                        <p id="label-number-answers" class="list-group-item-text">Ilość <b>możliwych</b> odpowiedzi:</p>
+                        <select id="answer-number"></select>
+                    </li>
+                    <li class="list-group-item bg-light-green">
+                        <p class="list-group-item-text">Data ważności:</p>
+                        <input type="text" required="" id="datepicker" placeholder="rrrr-mm-dd">
+                        <p class="list-group-item-text">do godziny:</p>
+                        <input type="time" value="23:59" required="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-warning " id="advenced">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="fa fa-gears"></span> Zawansowane <button aria-label="Close" class="close" data-dest="advenced"><span aria-hidden="true">×</span></button></h3></div>
+                <ul class="list-group">
+                    <li class="list-group-item bg-light-orange">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"><span>&nbsp; Powiadom o wynikach: </span></label>
+                        </div>
+                        <input type="email" placeholder="e-mail" inputmode="email">
+                    </li>
+                    <li class="list-group-item bg-light-orange">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"><span>&nbsp; Pokaż głosujacym wyniki <strong>dopiero po zakończeniu</strong> głosowania </span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="text-center">Created by Marcin Pietroszek <span class="fa fa-copyright"></span> 2015 Wszelkie prawa zastrzeżone! </p>
+    </footer>
+</body>
+</html>
