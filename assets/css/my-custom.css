@@ -96,6 +96,10 @@ body{
   z-index:2;
 }
 
+#vote{
+  margin-top:2em;
+}
+
 input[type=text], input[type=email], input[type=date], input[type=time], textarea, select{
   color:black;
   text-shadow:2px 2px 3px rgba(0,0,0,0.3);
@@ -118,6 +122,12 @@ html{
 
 .bg-light-blue{
   background-color:#abd3ee;
+}
+
+.vote-answer{
+  margin:0 3px 3px 3px;
+  border-color:rgba(50,50,50,0.3);
+  color:black;
 }
 
 .answer{
