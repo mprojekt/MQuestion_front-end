@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQuestion - głosowanie</title>
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/my-custom.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/my-scripts.vote.js"></script>
+	<script src="assets/js/jquery.ui.datepicker-pl.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default panel-nav">
+                    <div class="panel-heading">
+                        <h1 class="text-center">MQuestion </h1></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-nowrap text-right" id="page-label">głosowanie </h1></div>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <article id="question">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <p>Tytuł pytania</p>
+                    </div>
+                    <div class="panel-body bg-light-blue">
+                        <p>Treść pytania</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-light-blue"><span>Odpowiedzi: </span>
+                            <ul class="list-group">
+                                <li class="list-group-item answer">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Odpowiedź 1</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item answer">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Odpowiedź 2</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item answer">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Odpowiedź 3</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="panel-footer bg-light-blue clearfix">
+                        <div class="col-md-7">
+                            <p>Możesz zaznaczyć x odpowiedzi.</p>
+                        </div>
+                        <div class="col-md-5">
+                            <button class="btn btn-success btn-block" type="button">Oddaj głos</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <footer>
+        <p class="text-center">Created by Marcin Pietroszek <span class="fa fa-copyright"></span> 2014-2015 Wszelkie prawa zastrzeżone! </p>
+    </footer>
+</body>
+
+</html>
