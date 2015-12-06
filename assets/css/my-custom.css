@@ -1,3 +1,9 @@
+canvas{
+	width:100%;
+	height:300px;
+	border:2px solid rgba(0,0,0,0.3);
+}
+
 .radio-inline{
   width:100%;
   padding:0;
@@ -26,6 +32,15 @@
 .right-answer-short{
 	position:static !important;
 	padding-left:30px
+}
+
+.bg-blue{
+  background-color:#006699;
+  margin:10px;
+}
+
+.bg-blue h3, .bg-blue p{
+  color:white;
 }
 
 input[type=radio], input[type=checkbox]{
@@ -96,7 +111,7 @@ body{
   z-index:2;
 }
 
-#vote{
+#vote, #show, #show-setings{
   margin-top:2em;
 }
 

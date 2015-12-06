@@ -12,7 +12,7 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/my-scripts.vote.js"></script>
+	<script src="assets/js/my-scripts.show.js"></script>
 	<script src="assets/js/jquery.ui.datepicker-pl.js"></script>
 </head>
 
@@ -26,19 +26,21 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h1 class="text-nowrap text-left" id="page-label">wyniki </h1></div>
+                <h1 class="text-nowrap" id="page-label">wyniki </h1></div>
         </div>
         <div class="col-md-8 col-md-offset-1">
-            <div class="panel panel-info bg-light-blue">
-                <div class="panel-body bg-light-blue"><span>// wykres w &lt;canvas&gt;</span></div>
-                <div class="panel-footer bg-blue">
-                    <h3>Tytuł pytania</h3>
-                    <p>treść pytania</p>
-                </div>
-            </div>
+			<article id="show">
+				<div class="panel panel-info bg-light-blue">
+					<canvas id="graph"></canvas>
+					<div class="panel-footer bg-blue">
+						<h3>Tytuł pytania</h3>
+						<p>treść pytania</p>
+					</div>
+				</div>
+			</article>
         </div>
         <div class="col-md-3">
-            <div class="panel panel-success draggable" id="setings">
+            <div class="panel panel-success" id="show-setings">
                 <ul class="list-group">
                     <li class="list-group-item bg-light-green">
                         <p class="list-group-item-text">Typ wykresu:</p>
