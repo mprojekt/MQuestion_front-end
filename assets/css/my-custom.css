@@ -272,6 +272,7 @@ html{
 
 p{
   font-size:15px;
+  margin-bottom:0;
   text-shadow:2px 2px 3px rgba(0,0,0,0.3);
   font-weight:400;
 }
@@ -314,3 +315,46 @@ li p:not(:first-child){
   margin-top:10px;
 }
 
+.text-vertical{
+  height:100%;
+  position:absolute;
+  text-shadow:2px 2px 3px rgba(0,0,0,0.3);
+  color:white;
+  font-size:6em;
+  -ms-transform:rotate(-80deg);
+  -moz-transform:rotate(-80deg);
+  -webkit-transform:rotate(-80deg);
+  transform:rotate(-80deg);
+}
+
+.question{
+  width:75%;
+}
+
+.question:first-child{
+  padding-top:20px;
+}
+
+.padding-l-r-0{
+  padding-left:0;
+  padding-right:0;
+}
+
+.height-100{
+  height:100%;
+  display:inline-block;
+}
+
+.question-text{
+  top:120px;
+  left:-100px;
+}
+
+.answer-text{
+  top:210px;
+  left:-180px;
+}
+
+.light-bg-area{
+  background-color:rgba(33,83,133,0.2);
+}
