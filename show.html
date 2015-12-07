@@ -14,6 +14,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/my-scripts.show.js"></script>
 	<script src="assets/js/jquery.ui.datepicker-pl.js"></script>
+	<script src="assets/js/Chart.min.js"></script>
 </head>
 
 <body>
@@ -44,9 +45,10 @@
                 <ul class="list-group">
                     <li class="list-group-item bg-light-green">
                         <p class="list-group-item-text">Typ wykresu:</p>
-                        <select>
-                            <option value="1" selected="">słupkowy</option>
-                            <option value="2">kreskowy</option>
+                        <select id="chart-type">
+                            <option value="bar" selected="">słupkowy</option>
+                            <option value="line">kreskowy</option>
+							<option value="pie">kołowy</option>
                         </select>
                     </li>
                 </ul>
