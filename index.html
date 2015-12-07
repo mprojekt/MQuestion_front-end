@@ -12,8 +12,7 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/my-scripts.home.js"></script>
-	<script src="assets/js/jquery.ui.datepicker-pl.js"></script>	
+	<script src="assets/js/my-scripts.home.js"></script>	
 </head>
 
 <body>
@@ -48,37 +47,21 @@
                         </div>
                     </div>
                 </article>
-                <article class="question draggable">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <p>Tytuł pytania</p>
-                        </div>
-                        <div class="panel-body bg-light-blue">
-                            <p>Treść pytania</p>
-                        </div>
-                        <div class="panel-footer bg-light-blue clearfix padding-l-r-0">
-                            <div class="col-md-7">
-                                <p>Tremin ważności pytania: dd-mm-yyyy hh:mm.</p>
-                            </div>
-                            <div class="col-md-5"><a class="btn btn-success btn-block" role="button" href="vote.html">Zobacz i zagłosuj</a></div>
-                        </div>
-                    </div>
-                </article>
-                <div class="row">
-                    <div class="col-md-4"><a class="btn btn-info btn-block" role="button" href="#">Zobacz więcej!</a></div>
-                    <div class="col-md-1">
-                        <p class="lead text-center text-primary">lub </p>
-                    </div>
-                    <div class="col-md-4"><a class="btn btn-success btn-block" role="button" href="create.html">Zadaj własne pytanie!</a></div>
-                </div>
             </div>
+			<div class="col-md-10 col-md-offset-2">
+				<div class="col-md-4"><a class="btn btn-info btn-block" role="button" href="#">Zobacz więcej!</a></div>
+				<div class="col-md-1">
+					<p class="lead text-center text-primary">lub </p>
+				</div>
+				<div class="col-md-4"><a class="btn btn-success btn-block" role="button" href="create.html">Zadaj własne pytanie!</a></div>
+			</div>
         </div>
         <hr>
         <div class="row">
             <div class="col-md-2 height-100">
                 <h1 class="text-vertical answer-text">odpowiedzi </h1></div>
             <div class="col-md-10 light-bg-area">
-                <article class="question draggable">
+                <article class="result draggable">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <p>Tytuł pytania</p>
@@ -88,30 +71,29 @@
                         </div>
                         <div class="panel-footer bg-light-blue clearfix padding-l-r-0">
                             <div class="col-md-7">
-                                <p>Tremin ważności pytania: dd-mm-yyyy hh:mm.</p>
+                                <p>Głosowanie zakończone: dd-mm-yyyy hh:mm.</p>
                             </div>
-                            <div class="col-md-5"><a class="btn btn-info btn-block" role="button" href="show.html">Zobacz i zagłosuj</a></div>
+                            <div class="col-md-5"><a class="btn btn-info btn-block" role="button" href="show.html">Zobacz wyniki</a></div>
                         </div>
                     </div>
-                </article>
-                <article class="question draggable">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <p>Tytuł pytania</p>
-                        </div>
-                        <div class="panel-body bg-light-blue">
-                            <p>Treść pytania</p>
-                        </div>
-                        <div class="panel-footer bg-light-blue clearfix padding-l-r-0">
-                            <div class="col-md-7">
-                                <p>Tremin ważności pytania: dd-mm-yyyy hh:mm.</p>
-                            </div>
-                            <div class="col-md-5"><a class="btn btn-info btn-block" role="button" href="show.html">Zobacz i zagłosuj</a></div>
-                        </div>
-                    </div>
-                </article>
+                </article>                
             </div>
+			<div class="col-md-10 col-md-offset-2">
+				<div class="col-md-4"><a class="btn btn-info btn-block" role="button" href="#">Przejrzyj archiwum</a></div>			
+			</div>
         </div>
+		<article class="comments draggable">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<p>Informacje</p>
+				</div>
+				<div class="panel-body bg-light-blue">
+					<p>Test wyglądu strony.</p>
+					<p>Prawie wszystkie funkcjonalności działają choć niektóre będą potrzebować poprawek.</p>
+					<p>Na razie to tylko test :)</p>
+				</div>
+			</div>
+		</article>
     </div>
     <footer>
         <p class="text-center">Created by Marcin Pietroszek <span class="fa fa-copyright"></span> 2015 Wszelkie prawa zastrzeżone! </p>

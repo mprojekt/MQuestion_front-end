@@ -240,6 +240,13 @@ html{
   cursor:all-scroll;
 }
 
+.comments{
+	position:absolute;
+	top:50px;
+	left:50px;
+	width:300px;
+}
+
 #info-caret:hover{
   opacity:1;
 }
@@ -327,12 +334,12 @@ li p:not(:first-child){
   transform:rotate(-80deg);
 }
 
-.question{
+.question, .result{
   width:75%;
 }
 
-.question:first-child{
-  padding-top:20px;
+article .panel{
+	margin:0;
 }
 
 .padding-l-r-0{
@@ -356,5 +363,11 @@ li p:not(:first-child){
 }
 
 .light-bg-area{
+  background-color:rgba(33,83,133,0.2);
+  padding-top:20px;
+  height:410px;
+}
+
+.light-bg-area + .col-md-10{
   background-color:rgba(33,83,133,0.2);
 }
