@@ -1,5 +1,4 @@
-$(function () {
-	
+$(function () {	
 	// for tests!
 	var questionTmp = $('.question').last();	
 	for(i = 1; i < 5; i++){
