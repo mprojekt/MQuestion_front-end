@@ -15,7 +15,7 @@
 	<script src="assets/js/my-scripts.home.js"></script>	
 </head>
 
-<body>
+<body class="bg-main">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -31,17 +31,17 @@
             <div class="col-md-2 height-100">
                 <h1 class="text-vertical question-text">pytania </h1></div>
             <div class="col-md-10 light-bg-area">
-                <article class="question draggable">
+                <article class="question draggable hide">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <p>Tytuł pytania</p>
+                            <p class="title">Tytuł pytania</p>
                         </div>
                         <div class="panel-body bg-light-blue">
-                            <p>Treść pytania</p>
+                            <p class="content">Treść pytania</p>
                         </div>
                         <div class="panel-footer bg-light-blue clearfix padding-l-r-0">
                             <div class="col-md-7">
-                                <p>Tremin ważności pytania: dd-mm-yyyy hh:mm.</p>
+                                <p>Tremin ważności pytania: <b class="date">dd-mm-yyyy hh:mm</b>.</p>
                             </div>
                             <div class="col-md-5"><a class="btn btn-success btn-block" role="button" href="vote.html">Zobacz i zagłosuj</a></div>
                         </div>
@@ -49,11 +49,32 @@
                 </article>
             </div>
 			<div class="col-md-10 col-md-offset-2">
-				<div class="col-md-4"><a class="btn btn-info btn-block" role="button" href="#">Zobacz więcej!</a></div>
-				<div class="col-md-1">
-					<p class="lead text-center text-primary">lub </p>
+				<div class="col-md-4">
+					<nav class="draggable" id="show-questions-pagin">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<p>Zobacz więcej pytań!</p>
+							</div>
+							<ul class="list-group">
+								<li class="list-group-item bg-light-blue">
+									<div class="input-group input-group-sm">
+										<div class="input-group-btn">
+											<button id="question-first" class="btn btn-primary btn-pagin-question" data-dest="first">&laquo;</button>
+											<button id="question-previous" class="btn btn-primary btn-pagin-question" data-dest="previous">&lsaquo;</button></div>
+											<input id="question-page" class="form-control text-center" placeholder="Zestaw 1 z 1" type="text" />
+										<div class="input-group-btn">
+											<button id="question-next" class="btn btn-primary btn-pagin-question" data-dest="next">&rsaquo;</button>
+											<button id="question-last" class="btn btn-primary btn-pagin-question" data-dest="last">&raquo;</button></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>
 				</div>
-				<div class="col-md-4"><a class="btn btn-success btn-block" role="button" href="create.html">Zadaj własne pytanie!</a></div>
+				<div class="col-md-1">
+					<p class="lead text-center white">lub </p>
+				</div>
+				<div class="col-md-4"><a class="btn btn-success btn-block" role="button" href="create.html">Zadaj własne pytanie!</a></div>				
 			</div>
         </div>
         <hr>
@@ -61,25 +82,47 @@
             <div class="col-md-2 height-100">
                 <h1 class="text-vertical answer-text">odpowiedzi </h1></div>
             <div class="col-md-10 light-bg-area">
-                <article class="result draggable">
+                <article class="result draggable hide">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <p>Tytuł pytania</p>
+                            <p class="title">Tytuł pytania</p>
                         </div>
                         <div class="panel-body bg-light-blue">
-                            <p>Treść pytania</p>
+                            <p class="content">Treść pytania</p>
                         </div>
                         <div class="panel-footer bg-light-blue clearfix padding-l-r-0">
                             <div class="col-md-7">
-                                <p>Głosowanie zakończone: dd-mm-yyyy hh:mm.</p>
+                                <p>Głosowanie zakończone: <b class="date">dd-mm-yyyy hh:mm</b>.</p>
                             </div>
-                            <div class="col-md-5"><a class="btn btn-info btn-block" role="button" href="show.html">Zobacz wyniki</a></div>
+                            <div class="col-md-5"><a class="btn btn-primary btn-block" role="button" href="show.html">Zobacz wyniki</a></div>
                         </div>
                     </div>
                 </article>                
             </div>
 			<div class="col-md-10 col-md-offset-2">
-				<div class="col-md-4"><a class="btn btn-info btn-block" role="button" href="#">Przejrzyj archiwum</a></div>			
+				<div class="col-md-4">
+					<nav class="draggable" id="show-result-pagin">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<p>Zobacz więcej odpowiedzi!</p>
+							</div>
+							<ul class="list-group">
+								<li class="list-group-item bg-light-blue">
+									<div class="input-group input-group-sm">
+										<div class="input-group-btn">
+											<button id="result-first" class="btn btn-primary btn-pagin-result" data-dest="first">&laquo;</button>
+											<button id="result-previous" class="btn btn-primary btn-pagin-result" data-dest="previous">&lsaquo;</button></div>
+											<input id="result-page" class="form-control text-center" placeholder="Zestaw 1 z 1" type="text" />
+										<div class="input-group-btn">
+											<button id="result-next" class="btn btn-primary btn-pagin-result" data-dest="next">&rsaquo;</button>
+											<button id="result-last" class="btn btn-primary btn-pagin-result" data-dest="last">&raquo;</button></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>	
+				<div class="col-md-1"><p class="lead text-center white">&nbsp;</p></div>				
 			</div>
         </div>
 		<article class="comments draggable">
@@ -94,10 +137,10 @@
 				</div>
 			</div>
 		</article>
-    </div>
-    <footer>
-        <p class="text-center">Created by Marcin Pietroszek <span class="fa fa-copyright"></span> 2015 Wszelkie prawa zastrzeżone! </p>
-    </footer>
+		<footer class="stick-bottom">
+			<p class="text-center">Created by Marcin Pietroszek <span class="fa fa-copyright"></span> 2015 Wszelkie prawa zastrzeżone! </p>
+		</footer>
+    </div>    
 </body>
 
 </html>

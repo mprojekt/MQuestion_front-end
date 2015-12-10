@@ -14,9 +14,9 @@ MQuestion front-end uses a number of open source projects to work properly:
 * [jQuery] - this is elementary framework
 * [jQuery ui] - awesome features to user interface
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [Chart.js] - beatutifull charts
+* [Chart.js] - beautiful charts
 
-### Todos
+### TODOs
 
  - Add AJAX
  - fixes design

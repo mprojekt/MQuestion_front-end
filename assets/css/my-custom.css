@@ -89,18 +89,33 @@ input[type=radio]:checked + span:hover{
   background-color:#09324F;
 }
 
+html{
+	min-height:100%;
+}
+
 body{
-  height:100%;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background:rgb(71,160,255);
-  background:-moz-linear-gradient(top,  rgba(71,160,255,1) 0%, rgba(28,138,206,1) 54%, rgba(0,92,150,1) 81%, rgba(0,46,81,1) 96%, rgba(7,20,28,1) 100%);
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,160,255,1)), color-stop(54%,rgba(28,138,206,1)), color-stop(81%,rgba(0,92,150,1)), color-stop(96%,rgba(0,46,81,1)), color-stop(100%,rgba(7,20,28,1)));
-  background:-webkit-linear-gradient(top,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
-  background:-o-linear-gradient(top,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
-  background:-ms-linear-gradient(top,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
-  background:linear-gradient(to bottom,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#47a0ff', endColorstr='#07141c',GradientType=0 );
+	min-height:100%;
+	margin:0;
+}
+
+.bg-main{  
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background:rgb(71,160,255);
+	background:-moz-linear-gradient(top,  rgba(71,160,255,1) 0%, rgba(28,138,206,1) 54%, rgba(0,92,150,1) 81%, rgba(0,46,81,1) 96%, rgba(7,20,28,1) 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,160,255,1)), color-stop(54%,rgba(28,138,206,1)), color-stop(81%,rgba(0,92,150,1)), color-stop(96%,rgba(0,46,81,1)), color-stop(100%,rgba(7,20,28,1)));
+	background:-webkit-linear-gradient(top,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
+	background:-o-linear-gradient(top,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
+	background:-ms-linear-gradient(top,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
+	background:linear-gradient(to bottom,  rgba(71,160,255,1) 0%,rgba(28,138,206,1) 54%,rgba(0,92,150,1) 81%,rgba(0,46,81,1) 96%,rgba(7,20,28,1) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#47a0ff', endColorstr='#07141c',GradientType=0 );
+}
+
+.stick-bottom {
+    position:absolute;
+    bottom:0;
+    left:0;
+	right:0;
 }
 
 .navbar-inverse{
@@ -131,7 +146,6 @@ input[type=text], input[type=email], input[type=date], input[type=time], textare
 }
 
 html{
-  height:100%;
   font-size:15px;
 }
 
@@ -178,22 +192,22 @@ html{
 }
 
 ::-webkit-input-placeholder{
-  color:white;
+  color:white !important;
   text-shadow:2px 2px 3px rgba(0,0,0,0.3);
 }
 
 :-moz-placeholder{
-  color:white;
+  color:white !important;
   text-shadow:2px 2px 3px rgba(0,0,0,0.3);
 }
 
 ::-moz-placeholder{
-  color:white;
+  color:white !important;
   text-shadow:2px 2px 3px rgba(0,0,0,0.3);
 }
 
 :-ms-input-placeholder{
-  color:white;
+  color:white !important;
   text-shadow:2px 2px 3px rgba(0,0,0,0.3);
 }
 
@@ -215,11 +229,15 @@ html{
   z-index:5;
 }
 
-.panel-nav h1{
+.panel-nav h1, .white{
   color:white;
   margin-top:0px;
   font-weight:400;
   text-shadow:2px 2px 3px rgba(0,0,0,0.3);
+}
+
+.panel-primary{
+	border-color:white;
 }
 
 .panel-handler{
@@ -238,6 +256,9 @@ html{
 
 .draggable .panel-heading{
   cursor:all-scroll;
+  background-image:url(../img/bg-hanger.png);
+  background-repeat:no-repeat;
+  background-position: 2px 0;
 }
 
 .comments{
@@ -291,10 +312,7 @@ span{
 }
 
 footer{
-  position:absolute;
-  right:0;
-  left:0;
-  bottom:0;
+	margin-top:15px;
 }
 
 footer p{
@@ -358,7 +376,7 @@ article .panel{
 }
 
 .answer-text{
-  top:210px;
+  top:200px;
   left:-180px;
 }
 
